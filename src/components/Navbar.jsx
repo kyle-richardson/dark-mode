@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import {useDarkMode} from "../hooks/useDarkMode"
+import React from 'react';
 
-const Navbar = () => {
-  const [darkMode, setDarkMode] = useDarkMode();
+const Navbar = ({darkMode, setDarkMode}) => {
   const toggleMode = e => {
     e.preventDefault();
     setDarkMode(!darkMode);
