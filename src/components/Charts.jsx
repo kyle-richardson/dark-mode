@@ -17,8 +17,8 @@ const Charts = ({ coinData, darkMode }) => {
             </div>
           </div>
           <Route exact path={`/${coin.name}`} render={(props)=>
-            <Chart props={props} darkMode={darkMode} sparklineData={coin.sparkline_in_7d.price} />}
-        />
+              <Chart props={props} darkMode={darkMode} sparklineData={coin.sparkline_in_7d.price} />}
+          />
        </div>
       ))}
     </div>

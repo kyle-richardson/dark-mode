@@ -6,7 +6,8 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
-  Tooltip
+  Tooltip,
+  ResponsiveContainer
 } from "recharts";
 
 const Chart = ({ sparklineData, darkMode }) => {
@@ -27,16 +28,18 @@ const Chart = ({ sparklineData, darkMode }) => {
     .filter(data => data);
 
   return (
-    <LineChart width={1100} height={300} data={formattedData}>
-      <Line type="monotone" dataKey="value" stroke="#8884d8" />
-      <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
-      <XAxis dataKey="date" interval={3} />
-      <YAxis />
-      <Tooltip 
-        contentStyle={darkMode ? {backgroundColor: 'slategray'}: null}
-        itemStyle={darkMode ? {color: 'rgb(223, 183, 255)'}: null}
-      />
-    </LineChart>
+    <ResponsiveContainer aspect={2.8/1.0} >
+      <LineChart width={1100} height={300} data={formattedData}>
+        <Line type="monotone" dataKey="value" stroke="#8884d8" />
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <XAxis dataKey="date" interval={3} />
+        <YAxis />
+        <Tooltip 
+          contentStyle={darkMode ? {backgroundColor: 'slategray'}: null}
+          itemStyle={darkMode ? {color: 'rgb(223, 183, 255)'}: null}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   );
 };
 
