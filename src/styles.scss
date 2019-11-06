@@ -156,6 +156,10 @@ img {
   height: auto;
   width: 100%;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 
 .flex-spacer {
   width: 100%;
@@ -204,19 +208,23 @@ img {
 }
 
 .charts {
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
 }
 
+.chart__top {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
 .chart__container {
   align-items: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin: 50px 0 0;
+  flex-direction: column;
+  margin: 10px auto;
   width: 100%;
 }
-
 .chart-header {
   display: flex;
   align-items: center;
@@ -229,8 +237,7 @@ img {
 .coin__title {
   display: block;
   margin-left: 8px;
-    min-width: 160px;
-text-align: left;
+  text-align: left;
 }
 
 .coin__symbol {
@@ -249,5 +256,8 @@ text-align: left;
   .navbar {
     background-color: #1F2022;
     border: none;
+  }
+  a {
+    color: #fff;
   }
 }
